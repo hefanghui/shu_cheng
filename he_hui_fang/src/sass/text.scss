@@ -1,0 +1,52 @@
+@import './common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    font-size: px2rem(16px);
+    overflow: hidden;
+}
+
+.menu,
+.content {
+    @extend .wrap;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    >div {
+        width: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, .6);
+        color: #fff;
+        left: 0;
+    }
+    .top {
+        top: 0;
+    }
+    .bottom {
+        bottom: 0;
+        >div,
+        ul {
+            @include display(flex);
+        }
+        li,
+        p {
+            flex: 1;
+            text-align: center;
+        }
+        .config-box {
+            width: 100%;
+            height: px2rem(80px);
+            background: rgba(0, 0, 0, .6);
+            position: absolute;
+            bottom: px2rem(20px);
+        }
+    }
+}
+
+.content {
+    overflow: auto;
+}
