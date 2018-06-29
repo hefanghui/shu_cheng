@@ -45,12 +45,12 @@ gulp.task('server', function() {
                             } else {
                                 console.log(data);
                                 //添加
-                                // userdata.push(data);
-                                // var userObj = {
-                                //     userInfo: userdata
-                                // };
-                                // fs.writeFileSync('./mock/user/user.json', JSON.stringify(userObj));
-                                // res.end('{"res":1,"mes":"注册成功"}');
+                                userdata.push(data);
+                                var userObj = {
+                                    userInfo: userdata
+                                };
+                                fs.writeFileSync('./mock/user/user.json', JSON.stringify(userObj));
+                                res.end('{"res":1,"mes":"注册成功"}');
                             }
                         })
                         return false;

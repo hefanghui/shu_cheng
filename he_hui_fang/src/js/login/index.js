@@ -51,7 +51,7 @@ define(['jquery'], function($) {
                     }
                 })
             } else {
-                console.log(111)
+                //console.log(111)
                 $.ajax({
                     url: "/api/reslogin",
                     type: "post",
@@ -77,6 +77,7 @@ define(['jquery'], function($) {
             $('.pwd').attr('type', 'text')
         } else {
             $('.pwd').attr('type', 'password')
-        }4
+        }
+        4
     })
 });
